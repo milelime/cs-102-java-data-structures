@@ -1,6 +1,6 @@
 class Vehicle {
-  private Integer tollAmount;
-  private Owner owner;
+  Integer tollAmount;
+  Owner owner;
 }
 
 class Owner {
@@ -8,9 +8,15 @@ class Owner {
   private String lastName;
   private String licensePlate;
   private Integer accountNumber;
+
+  public Owner(String firstName, String lastName, String licensePlate, Integer accountNumber) {
+
+  }
 }
 
 class Car extends Vehicle {
+  Integer tollAmount = 3;
+  Owner person = new Owner();
 }
 
 class Truck extends Vehicle {
