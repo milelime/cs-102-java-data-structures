@@ -1,8 +1,10 @@
 class Vehicle {
+  private String licensePlate;
 }
 
 class Person {
-
+  private String firstName;
+  private String lastName;
 }
 
 class Car extends Vehicle {
