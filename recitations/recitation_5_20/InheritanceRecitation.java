@@ -36,10 +36,16 @@ class Truck extends Vehicle {
 }
 
 class EmergencyVehicle extends Vehicle {
+  // can add an axle field
+  Integer tollAmount = 0;
+
+  EmergencyVehicle(String licensePlate, Integer accountNumber) {
+    Owner person = new Owner(null, null, licensePlate, accountNumber);
+
+  }
 }
 
 public class InheritanceRecitation {
   public static void main(String[] args) {
-
   }
 }
