@@ -1,12 +1,13 @@
 class Vehicle {
-  private String licensePlate;
-  private Person driver;
-  private Integer accountNumber;
+  private Integer tollAmount;
+  private Owner owner;
 }
 
-class Person {
+class Owner {
   private String firstName;
   private String lastName;
+  private String licensePlate;
+  private Integer accountNumber;
 }
 
 class Car extends Vehicle {
