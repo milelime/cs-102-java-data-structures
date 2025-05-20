@@ -18,7 +18,7 @@ class Owner {
 }
 
 class Car extends Vehicle {
-  Integer tollAmount = 3;
+  Integer tollAmount = 5;
 
   Car(String firstName, String lastName, String licensePlate, Integer accountNumber) {
     Owner person = new Owner(firstName, lastName, licensePlate, accountNumber);
@@ -26,6 +26,13 @@ class Car extends Vehicle {
 }
 
 class Truck extends Vehicle {
+  // can add an axle field
+  Integer tollAmount = 9;
+
+  Truck(String firstName, String lastName, String licensePlate, Integer accountNumber) {
+    Owner person = new Owner(null, null, licensePlate, accountNumber);
+
+  }
 }
 
 class EmergencyVehicle extends Vehicle {
