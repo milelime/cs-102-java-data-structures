@@ -10,13 +10,16 @@ class Owner {
   private Integer accountNumber;
 
   public Owner(String firstName, String lastName, String licensePlate, Integer accountNumber) {
-
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.licensePlate = licensePlate;
+    this.accountNumber = accountNumber;
   }
 }
 
 class Car extends Vehicle {
   Integer tollAmount = 3;
-  Owner person = new Owner();
+  Owner person = new Owner(null, null, null, tollAmount);
 }
 
 class Truck extends Vehicle {
