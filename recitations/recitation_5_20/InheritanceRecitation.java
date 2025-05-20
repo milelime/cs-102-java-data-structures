@@ -1,5 +1,7 @@
 class Vehicle {
   private String licensePlate;
+  private Person driver;
+  private Integer accountNumber;
 }
 
 class Person {
