@@ -1,6 +1,11 @@
 class Vehicle {
   Integer tollAmount;
   Owner owner;
+
+  Vehicle(Owner owner, Integer tollAmount) {
+    this.owner = owner;
+    this.tollAmount = tollAmount;
+  }
 }
 
 class Owner {
@@ -8,6 +13,7 @@ class Owner {
   private String lastName;
   private String licensePlate;
   private Integer accountNumber;
+  private Integer accountBalance = 100;
 
   public Owner(String firstName, String lastName, String licensePlate, Integer accountNumber) {
     this.firstName = firstName;
@@ -15,13 +21,21 @@ class Owner {
     this.licensePlate = licensePlate;
     this.accountNumber = accountNumber;
   }
+
+  void deductToll(Integer tollAmount) {
+    this.accountBalance = accountBalance - tollAmount;
+  }
+
+  Integer getAccountBalance() {
+    return accountBalance;
+  }
 }
 
 class Car extends Vehicle {
-  Integer tollAmount = 5;
-
   Car(String firstName, String lastName, String licensePlate, Integer accountNumber) {
     Owner person = new Owner(firstName, lastName, licensePlate, accountNumber);
+
+    super(person, 5);
   }
 }
 
@@ -29,9 +43,10 @@ class Truck extends Vehicle {
   // can add an axle field
   Integer tollAmount = 9;
 
-  Truck(String firstName, String lastName, String licensePlate, Integer accountNumber) {
+  Truck(String licensePlate, Integer accountNumber) {
     Owner person = new Owner(null, null, licensePlate, accountNumber);
 
+    super(person, 9);
   }
 }
 
@@ -42,6 +57,7 @@ class EmergencyVehicle extends Vehicle {
   EmergencyVehicle(String licensePlate, Integer accountNumber) {
     Owner person = new Owner(null, null, licensePlate, accountNumber);
 
+    super(person, 0);
   }
 }
 
