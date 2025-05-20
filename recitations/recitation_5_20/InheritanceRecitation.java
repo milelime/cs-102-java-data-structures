@@ -19,7 +19,10 @@ class Owner {
 
 class Car extends Vehicle {
   Integer tollAmount = 3;
-  Owner person = new Owner(null, null, null, tollAmount);
+
+  Car(String firstName, String lastName, String licensePlate, Integer accountNumber) {
+    Owner person = new Owner(firstName, lastName, licensePlate, accountNumber);
+  }
 }
 
 class Truck extends Vehicle {
