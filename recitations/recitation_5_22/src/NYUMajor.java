@@ -8,4 +8,8 @@ class NYUMajor {
     this.chair = chair;
     this.requiredCredits = requiredCredits;
   }
+
+  public String toString() {
+    return "Chair: " + chair + " Required Credits: " + requiredCredits + " Major: " + majorName;
+  }
 }

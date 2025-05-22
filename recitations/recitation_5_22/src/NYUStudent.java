@@ -1,5 +1,5 @@
 
-public class NYUStudent extends NYUPerson {
+public class NYUStudent extends NYUPerson implements Cloneable {
 
   public String SID;
   private NYUMajor major;
@@ -10,8 +10,25 @@ public class NYUStudent extends NYUPerson {
     SID = inid;
   }
 
+  public Transcript getTranscript() {
+    return transcript;
+  }
+
+  public void setTranscript(Transcript transcript) {
+    this.transcript = transcript;
+  }
+
+  public NYUMajor getMajor() {
+    return major;
+  }
+
+  public void setMajor(NYUMajor major) {
+    this.major = major;
+  }
+
   public String toString() {
-    return " Student Name: " + name + " ID: " + SID;
+    return " Student Name: " + name + " ID: " + SID + " Major: " + major.toString() + " Transcript "
+        + transcript.toString();
   }
 
   public void sendemail(String message) {
@@ -24,9 +41,9 @@ public class NYUStudent extends NYUPerson {
     System.out.println("NYUStudent class " + message + " " + Integer.toString(priority));
   }
 
-  public Student clone() {
-    Student newStudent;
-    newStudent = (Student) super.clone();
+  public NYUStudent clone() throws CloneNotSupportedException {
+    NYUStudent newStudent;
+    newStudent = (NYUStudent) super.clone();
     newStudent.transcript = this.transcript.clone();
     return newStudent;
   }
