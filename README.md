@@ -1,3 +1,3 @@
-# cs-102-java-data-structures
+# cs-102-recitations
 
-My resources for CS 102 Summer 2025
+My recitations for CS 102 Summer 2025
