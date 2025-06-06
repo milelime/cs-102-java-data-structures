@@ -1,0 +1,16 @@
+Part 1:
+
+a. O(n)
+b. O(n^2)
+c. O(log(n))
+d. O(1)
+e. O(n)
+f. O(n)
+
+Part 2
+
+a. O(n^3)
+b. O(n^2)
+c. O(n^3)
+d. O(n)
+e. O(1)
